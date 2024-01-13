@@ -19,7 +19,9 @@
 
 <body>
     <main>
-        {{ content | safe }}
+        <div class="wrapper">
+            {{ content | safe }}
+        </div>
     </main>
     <footer>
         <div class="wrapper">
@@ -39,7 +41,7 @@
                         4.0</a>
                 </li>
             </ul>
-            <span>
+            <span class="edited">
                 Edited on {{ page.date.toLocaleString() }}
             </span>
         </div>

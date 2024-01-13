@@ -1,19 +1,21 @@
 :root {
     --page-width: 750px;
-    --color-accent: hsl(328, 100%, 54%);
-    --color-accent-dark: hsl(328, 100%, 35%);
-    --color-black: hsl(328, 100%, 3%);
-    --color-black-light: hsl(328, 100%, 10%);
+    --page-margin: 20px;
+
+    --color-accent: hsl(140, 80%, 35%);
+    --color-accent-dark: hsl(140, 80%, 25%);
+    --color-black: hsl(140, 80%, 5%);
+    --color-black-light: hsl(140, 80%, 10%);
     --color-white: hsl(328, 100%, 99.6%);
 
-    --text-color: var(--color-black);
+    --text-color: hsl(140, 80%, 10%);
     --background-color: var(--color-white);
 
     --link-color: var(--color-accent);
     --link-color-hover: var(--color-accent-dark);
 
     --footer-background-color: var(--color-white);
-    --footer-text-color: var(--color-black);
+    --footer-text-color: var(--text-color);
 
     --font-display: 'Josefin Sans', sans-serif;
     --font-body: 'Cardo', serif;
@@ -23,10 +25,9 @@
 
 body {
     accent-color: var(--color-accent);
-    background:
-        var(--footer-background-color);
+    background: var(--footer-background-color);
     overscroll-behavior: none;
-
+    color: var(--text-color);
     display: grid;
     grid-template-rows: 1fr auto;
     min-height: 100dvh;
@@ -36,8 +37,6 @@ body {
 }
 
 main {
-    width: var(--page-width);
-    margin: 0 auto;
     padding-block-start: 1rem;
     padding-block-end: 2rem;
 }
@@ -94,26 +93,44 @@ footer {
     background-color: var(--background-color);
     color: var(--text-color);
     padding-block: 0.5rem;
-    font-family: var(--font-display)
+    font-family: var(--font-display);
+    font-size: 1rem;
 }
 
+.wrapper {
+    padding-inline: var(--page-margin);
+    max-width: var(--page-width);
+    margin: 0 auto;
+}
 
 footer .wrapper {
     display: flex;
     justify-content: space-between;
-    width: var(--page-width);
-    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 footer ul {
     display: flex;
-    gap: 0.5rem;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 footer .cc {
     color: var(--text-color);
     text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    footer .wrapper {
+        justify-content: center;
+    }
+
+    footer .edited {
+        display: none;
+    }
 }
 
 footer .name {
