@@ -1,7 +1,6 @@
-# 11ty-blog
-An [11ty](https://www.11ty.dev/) blog template
+# My site
+
+An [11ty](https://www.11ty.dev/) page
 
 ## TODO
-- [ ] RSS
-- [ ] Postcss
 - [ ] Favicons
