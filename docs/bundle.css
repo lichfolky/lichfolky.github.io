@@ -1,5 +1,5 @@
 :root {
-    --page-width: 900px;
+    --page-width: 750px;
     --color-accent: hsl(328, 100%, 54%);
     --color-accent-dark: hsl(328, 100%, 35%);
     --color-black: hsl(328, 100%, 3%);
@@ -17,7 +17,7 @@
 
     --font-display: 'Josefin Sans', sans-serif;
     --font-body: 'Cardo', serif;
-
+    --font-size: 1.2rem;
 
 }
 
@@ -31,14 +31,15 @@ body {
     grid-template-rows: 1fr auto;
     min-height: 100dvh;
     background-color: var(--background-color);
-    font-size: 1.2rem;
+    font-size: var(--font-size);
     font-family: var(--font-body)
 }
 
 main {
     width: var(--page-width);
     margin: 0 auto;
-    padding-block: 1rem
+    padding-block-start: 1rem;
+    padding-block-end: 2rem;
 }
 
 li {
@@ -49,17 +50,37 @@ a {
     color: var(--link-color);
 }
 
+a.back {
+    font-size: calc(var(--font-size) + 0.4rem);
+    font-weight: 700;
+    float: inline-end;
+    padding-block-start: 1rem;
+    font-family: var(--font-display)
+}
+
 a:hover {
     color: var(--link-color-hover);
 }
 
-h1 {
+h1,
+h2 {
     font-family: var(--font-display);
-    font-size: 4rem;
 }
 
 h1 {
+    font-size: 4rem;
     padding-block: 1rem;
+}
+
+h2 {
+    font-size: 3rem;
+    padding-block: 1rem;
+}
+
+.posts h2 {
+    font-size: 2rem;
+    padding-block: 0.2rem;
+
 }
 
 p {

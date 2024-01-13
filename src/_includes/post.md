@@ -2,8 +2,8 @@
 layout: base.njk
 ---
 
-# {{title}}  
+## {{title}}  
 
 {{ content }}
 
-[back](/)
+<a href="/" class="back">Go back</a>

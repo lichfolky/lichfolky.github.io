@@ -4,10 +4,10 @@ title: My title
 ---
 # Hello! This is my blog!
 
-<ul>
+<ul class="posts">
 {%- for post in collections.post -%}
   <li>
-  <a href={{ post.url }}>{{ post.data.title }}</a></li>
+  <a href={{ post.url }}><h2>{{ post.data.title }}</h2></a></li>
 {%- endfor -%}
 </ul>
 
