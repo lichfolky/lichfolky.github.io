@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/bundle.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Josefin+Sans:wght@400;700&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/bundle.css">
 
     <script src="/bundle.js" defer></script>
 </head>
@@ -27,7 +28,7 @@
         <div class="wrapper">
             <ul>
                 <li>
-                    <span class="name">M. Folcarelli</span>
+                    <span class="name">M. Folcarelli</span> -
                 </li>
                 <li>
                     <a href="/">[Index]</a>
@@ -36,13 +37,16 @@
                     <a href="/links">[links]</a>
                 </li>
                 <li>
-                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="cc">CC
+                    <a href="/about-me">[about-me]</a>
+                </li>
+                <li>
+                    - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" class="cc">CC
                         BY-NC-SA
                         4.0</a>
                 </li>
             </ul>
             <span class="edited">
-                Edited on {{ page.date.toLocaleDateString() }}
+                Last edit - {{ page.date.toLocaleDateString("it") }}
             </span>
         </div>
     </footer>
