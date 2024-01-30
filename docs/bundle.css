@@ -2,22 +2,25 @@
     --page-width: 720px;
     --page-margin: 20px;
 
-    --color-primary: #787387;
-    --color-secondary: hsl(300, 11%, 34%);
-    --color-tertiary: #dbad8d;
+    --color-primary: hsl(255, 10%, 50%);
+    --color-secondary: hsl(300, 10%, 35%);
+    --color-tertiary: hsl(25, 55%, 70%);
 
-    --color-black: hsl(300, 11%, 14%);
-    --color-white: hsl(25, 52%, 85%);
+    --color-accent: var(--color-tertiary);
+    --color-black: hsl(300, 10%, 15%);
+    --color-white: hsl(25, 50%, 83%);
 
     --text-color: var(--color-black);
-    --text-display-color: var(--text-color);
+    --text-display-color: var(--color-secondary);
     --background-color: var(--color-white);
 
     --link-color: var(--color-secondary);
     --link-color-hover: var(--color-primary);
 
-    --footer-background-color: var(--background-color);
-    --footer-text-color: var(--text-color);
+    --footer-background-color: var(--color-secondary);
+    --footer-text-color: var(--color-tertiary);
+    --footer-link-color: var(--color-tertiary);
+    --footer-link-hover-color: hsl(255, 8%, 65%);
 
     --font-display: 'Josefin Sans', sans-serif;
     --font-body: 'Cardo', serif;
@@ -50,10 +53,11 @@ li {
 }
 
 .posts ::marker {
-    content: '> ';
+    content: '- ';
 }
 
 .posts li {
+    line-height: 1.2;
     margin-inline-start: 2rem;
 }
 
@@ -78,13 +82,18 @@ a:hover {
 
 :is(h1, h2) a:hover {
     color: inherit;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a.back {
     font-size: 2rem;
     float: inline-end;
-    font-family: var(--font-display)
+    font-family: var(--font-display);
+    text-decoration: none;
+}
+
+a.back:hover {
+    text-decoration: underline;
 }
 
 h1,
@@ -98,7 +107,7 @@ h1 {
     padding-block-start: 2rem;
     padding-block-end: 1.5rem;
     line-height: 1.1;
-    font-weight: 400;
+    font-weight: 700;
     color: var(--text-display-color);
 }
 
@@ -110,10 +119,8 @@ h2 {
     line-height: 1.1;
 }
 
-
 h1+h2 {
     padding-block-start: 0rem;
-
 }
 
 .posts h2 {
@@ -126,11 +133,8 @@ p+p {
 }
 
 footer {
-    --text-color: var(--footer-text-color);
-    --background-color: var(--footer-background-color);
-
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--footer-background-color);
+    color: var(--footer-text-color);
     padding-block: 0.5rem;
     font-family: var(--font-display);
     font-size: 1rem;
@@ -138,7 +142,7 @@ footer {
 
 .wrapper {
     padding-inline: var(--page-margin);
-    width: var(--page-width);
+    max-width: var(--page-width);
     margin: 0 auto;
 }
 
@@ -156,10 +160,20 @@ footer ul {
     gap: 0.5rem;
 }
 
-footer .cc {
-    color: var(--text-color);
+footer a {
+    color: var(--footer-link-color);
     text-decoration: none;
 }
+
+footer a:hover {
+    color: var(--footer-link-hover-color);
+    text-decoration: underline;
+}
+
+/* footer .cc {
+    color: var(--text-color);
+    text-decoration: none;
+} */
 
 @media (max-width: 600px) {
 

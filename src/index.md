@@ -8,7 +8,7 @@ date: 2024-01-13
 
 <ul class="posts">
 {% assign top_posts = collections.post | reverse %}
-{%- for post in top_posts limit:5 -%}
+{%- for post in top_posts limit:6 -%}
   <a href='{{ post.url }}'>
     <li>{{ post.data.title }}</li>
   </a>
