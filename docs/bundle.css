@@ -18,14 +18,15 @@
     --link-color-hover: var(--color-primary);
 
     --footer-background-color: var(--color-secondary);
-    --footer-text-color: var(--color-tertiary);
+    --footer-text-color: hsl(25, 50%, 78%);
     --footer-link-color: var(--color-tertiary);
     --footer-link-hover-color: hsl(255, 8%, 65%);
 
     --font-display: 'Josefin Sans', sans-serif;
     --font-body: 'Cardo', serif;
-    --font-size: 150%;
 
+    /* 24px */
+    --font-size: 1.5rem;
 }
 
 body {
@@ -71,7 +72,7 @@ a:hover {
 }
 
 .posts a {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-family: var(--font-display);
 }
 
@@ -86,8 +87,9 @@ a:hover {
 }
 
 a.back {
-    font-size: 2rem;
+    font-size: 2.25rem;
     float: inline-end;
+    padding-block-start: 0.5rem;
     font-family: var(--font-display);
     text-decoration: none;
 }
@@ -102,17 +104,23 @@ h3 {
     font-family: var(--font-display);
 }
 
+h1.home-title {
+    font-size: 4.5rem;
+}
+
 h1 {
-    font-size: 4rem;
+    /* 64px */
+    font-size: 3rem;
     padding-block-start: 2rem;
     padding-block-end: 1.5rem;
     line-height: 1.1;
     font-weight: 700;
     color: var(--text-display-color);
+    letter-spacing: -0.1rem;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2.25rem;
     font-weight: 400;
     padding-block-start: 0.5rem;
     padding-block-end: 0.5rem;
@@ -135,9 +143,9 @@ p+p {
 footer {
     background-color: var(--footer-background-color);
     color: var(--footer-text-color);
-    padding-block: 0.5rem;
+    padding-block: 0.6rem 0.4rem;
     font-family: var(--font-display);
-    font-size: 1rem;
+    font-size: 1.125rem;
 }
 
 .wrapper {

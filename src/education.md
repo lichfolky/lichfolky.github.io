@@ -1,5 +1,5 @@
 ---
 layout: base.njk
-title: Giochi
+title: corsi
 ---
-## giochi  
+## corsi  

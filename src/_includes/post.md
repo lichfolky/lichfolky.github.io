@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 
-## [{{title}}]({{page.url}})
+# [{{title}}]({{page.url}})
 
 {{ content }}
 
