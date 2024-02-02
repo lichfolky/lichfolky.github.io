@@ -7,7 +7,7 @@
     --color-tertiary: hsl(25, 55%, 70%);
 
     --color-accent: var(--color-tertiary);
-    --color-black: hsl(300, 10%, 15%);
+    --color-black: hsl(300, 10%, 10%);
     --color-white: hsl(25, 50%, 83%);
 
     --text-color: var(--color-black);
@@ -32,16 +32,19 @@
 body {
     accent-color: var(--color-accent);
     overscroll-behavior: none;
-    color: var(--text-color);
     display: grid;
     grid-template-rows: 1fr auto;
     min-height: 100dvh;
     background-color: var(--background-color);
-    font-size: var(--font-size);
+
+
+    /* Body text */
+    color: var(--text-color);
     font-family: var(--font-body);
+    font-size: var(--font-size);
     font-weight: 400;
-    letter-spacing: -0.02rem;
-    line-height: 1.4;
+    line-height: 1.35;
+
 }
 
 main {
@@ -53,13 +56,24 @@ li {
     list-style: none;
 }
 
+.posts a {
+    font-size: 2.25rem;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+.posts a:hover {
+    text-decoration: underline;
+}
+
 .posts ::marker {
-    content: '- ';
+    content: '';
 }
 
 .posts li {
     line-height: 1.2;
-    margin-inline-start: 2rem;
+    margin-inline-start: 1rem;
 }
 
 a {
@@ -69,11 +83,6 @@ a {
 
 a:hover {
     color: var(--link-color-hover);
-}
-
-.posts a {
-    font-size: 2.25rem;
-    font-family: var(--font-display);
 }
 
 :is(h1, h2) a {
@@ -89,9 +98,10 @@ a:hover {
 a.back {
     font-size: 2.25rem;
     float: inline-end;
-    padding-block-start: 0.5rem;
+    padding-block-start: 2rem;
     font-family: var(--font-display);
     text-decoration: none;
+    font-weight: 700;
 }
 
 a.back:hover {
@@ -105,18 +115,24 @@ h3 {
 }
 
 h1.home-title {
+    /* Hero title */
     font-size: 4.5rem;
+    letter-spacing: -0.18rem;
+
+    padding-block-start: 2rem;
+    padding-block-end: 1.44rem;
 }
 
 h1 {
     /* 64px */
     font-size: 3rem;
-    padding-block-start: 2rem;
-    padding-block-end: 1.5rem;
     line-height: 1.1;
     font-weight: 700;
     color: var(--text-display-color);
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.06rem;
+
+    padding-block-start: 2rem;
+    padding-block-end: 1.62rem;
 }
 
 h2 {
@@ -131,10 +147,7 @@ h1+h2 {
     padding-block-start: 0rem;
 }
 
-.posts h2 {
-    font-size: 2rem;
-    padding-block: 0rem;
-}
+
 
 p+p {
     padding-block-start: 0.5rem;
