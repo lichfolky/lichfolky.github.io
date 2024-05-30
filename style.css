@@ -1,7 +1,7 @@
 :root {
-    --accent-color: #ff9c38;
-    --text-color: #242628;
-    --svg-color: #4a4a4a;
+    --accent-color: hsl(30, 100%, 60%);
+    --text-color: hsl(210, 5%, 10%);
+    --svg-color: hsl(210, 5%, 30%);
     --background-color: hsl(210, 5%, 95%);
 
     --header-height: 5rem;
@@ -174,11 +174,10 @@ a:hover .accent {
 }
 
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme:) {
     :root {
         --text-color: hsl(210, 5%, 95%);
-        --svg-color: hsl(210, 5%, 95%);
-        --background-color: #242628;
+        --svg-color: hsl(210, 5%, 80%);
+        --background-color: hsl(210, 5%, 10%);
     }
-
 }
