@@ -174,7 +174,7 @@ a:hover .accent {
 }
 
 
-@media (prefers-color-scheme:) {
+@media (prefers-color-scheme: dark) {
     :root {
         --text-color: hsl(210, 5%, 95%);
         --svg-color: hsl(210, 5%, 80%);
