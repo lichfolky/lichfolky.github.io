@@ -72,9 +72,6 @@ nav a {
     font-weight: 500;
 }
 
-nav a:hover {
-    transform: rotate(-5deg);
-}
 
 .social ul {
     height: var(--header-height);
@@ -93,7 +90,7 @@ nav a:hover {
 
 .social svg:hover {
     fill: var(--accent-color);
-    transform: scale(1.1) rotate(15deg);
+    transform: scale(1.1) rotate(10deg);
 }
 
 main {
@@ -174,4 +171,14 @@ a:hover .accent {
     main {
         padding: 0;
     }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: hsl(210, 5%, 95%);
+        --svg-color: hsl(210, 5%, 95%);
+        --background-color: #242628;
+    }
+
 }
