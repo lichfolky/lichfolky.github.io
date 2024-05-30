@@ -2,7 +2,7 @@
     --accent-color: #ff9c38;
     --text-color: #242628;
     --svg-color: #4a4a4a;
-    --background-color: #FFFFFF;
+    --background-color: hsl(210, 5%, 95%);
 
     --header-height: 5rem;
 
@@ -25,18 +25,21 @@ img {
 body {
     font-family: var(--body-font);
     color: var(--text-color);
+    background-color: var(--background-color);
     font-size: 1rem;
     line-height: 1.3;
+    padding: 0 2rem;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
     height: var(--header-height);
+
     position: sticky;
     top: 0;
+    font-weight: 500;
 }
 
 .wrapper {
@@ -44,7 +47,6 @@ header {
 }
 
 aside {
-    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -70,6 +72,10 @@ nav a {
     font-weight: 500;
 }
 
+nav a:hover {
+    transform: rotate(-5deg);
+}
+
 .social ul {
     height: var(--header-height);
     align-items: center;
@@ -87,12 +93,12 @@ nav a {
 
 .social svg:hover {
     fill: var(--accent-color);
-    transform: scale(1.2);
+    transform: scale(1.1) rotate(15deg);
 }
 
 main {
     max-width: 900px;
-    padding: 3rem 150px;
+    padding: 0 0 0 8rem;
 }
 
 /* Typography */
@@ -100,7 +106,7 @@ main {
 
 h1 {
     font-family: var(--display-font);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.7rem;
     font-style: normal;
 }
@@ -117,4 +123,55 @@ a.logo {
 
 a:hover {
     color: var(--accent-color);
+}
+
+.accent {
+    color: var(--accent-color);
+}
+
+a:hover .accent {
+    color: var(--text-color);
+}
+
+@media (prefers-reduced-motion) {
+    .social svg:hover {
+        transform: none;
+    }
+
+    nav a:hover {
+        transform: none;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .wrapper {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav {
+        padding: 1rem 0;
+    }
+
+    header {
+        position: relative;
+    }
+
+    aside {
+        height: auto;
+        flex-direction: row;
+    }
+
+    .social {
+        display: none;
+    }
+
+    main {
+        padding: 0;
+    }
 }
