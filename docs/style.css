@@ -174,10 +174,16 @@ a:hover .accent {
 }
 
 
-@media (prefers-color-scheme: dark) {
-    :root {
+/* @media (prefers-color-scheme: dark) {
+    body {
         --text-color: hsl(210, 5%, 95%);
         --svg-color: hsl(210, 5%, 80%);
         --background-color: hsl(210, 5%, 10%);
     }
-}
+
+    body.light {
+        --text-color: hsl(210, 5%, 10%);
+        --svg-color: hsl(210, 5%, 30%);
+        --background-color: hsl(210, 5%, 95%);
+    }
+} */
