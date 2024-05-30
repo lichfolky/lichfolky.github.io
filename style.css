@@ -4,7 +4,7 @@
     --svg-color: #4a4a4a;
     --background-color: #FFFFFF;
 
-    --header-height: 3rem;
+    --header-height: 5rem;
 }
 
 * {
@@ -21,10 +21,12 @@ body {
     font-family: "Poppins", sans-serif;
     color: var(--text-color);
     height: 100%;
+    line-height: 1.3;
 }
 
+
 aside {
-    padding: 1rem 2rem;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,14 +35,15 @@ aside {
 
 nav {
     flex: 1;
-    display: flex;
-    align-items: center;
+    padding: 3rem 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 h1 {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-style: normal;
 }
 
@@ -49,14 +52,19 @@ nav ul {
 }
 
 .social ul {
+    height: var(--header-height);
+    align-items: center;
     display: flex;
     list-style: none;
-    gap: 0.5rem;
+    gap: 0.7rem;
 }
 
-nav a{
-    display: inline-block;   
-    transition: all 0.5s;
+nav a {
+    display: inline-block;
+    transition: all 0.2s;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 500;
 }
 
 svg,
@@ -67,9 +75,9 @@ img {
 
 .social svg {
     fill: var(--svg-color);
-    width: 20px;
-    height: 20px;
-    transition: all 0.5s;
+    width: 25px;
+    height: 25px;
+    transition: all 0.3s;
 }
 
 .social svg:hover {
@@ -84,7 +92,6 @@ header {
     align-items: center;
     padding: 0 2rem;
     height: var(--header-height);
-    font-weight: 700;
     position: sticky;
     top: 0;
 }

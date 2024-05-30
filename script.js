@@ -1,7 +1,7 @@
-console.log("Ciao!")
+console.log("Ciao!");
 
-dateElement = document.querySelector("#date")
+dateElement = document.querySelector("#date");
 
-today = new Date()
+today = new Date();
 
-dateElement.innerText = today.toLocaleString()
+dateElement.innerText = today.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
