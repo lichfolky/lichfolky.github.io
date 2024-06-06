@@ -8,6 +8,8 @@
 
     --display-font: "Poppins", sans-serif;
     --body-font: "Poppins", sans-serif;
+
+    --page-width: 1000px;
 }
 
 * {
@@ -47,15 +49,17 @@ header {
 }
 
 aside {
+    position: sticky;
+    top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100dvh - var(--header-height));
+    height: calc(100vh - var(--header-height));
 }
 
 nav {
     flex: 1;
-    padding: 3rem 0;
+    padding: 5rem 0;
     font-size: 1.2rem;
     line-height: 1.6;
 }
@@ -94,8 +98,8 @@ nav a {
 }
 
 main {
-    max-width: 900px;
-    padding: 0 0 0 8rem;
+    max-width: var(--page-width);
+    padding: 0 0 2rem 8rem;
 }
 
 /* Typography */
@@ -142,8 +146,14 @@ a:hover .accent {
 
 
 @media (max-width: 700px) {
+    .cards{
+        justify-content: center;
+        padding-top: 2rem;
+    }
+
     .wrapper {
-        display: block;
+         flex-direction: column;
+
     }
 
     nav ul {
@@ -171,6 +181,20 @@ a:hover .accent {
     main {
         padding: 0;
     }
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem 2rem;
+}
+
+.card{
+    width: calc(((var(--page-width) - 8rem) / 2) - 2rem );
+}
+
+.card h2{
+    padding-top: 1rem;
 }
 
 
