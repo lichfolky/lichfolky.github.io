@@ -1,13 +1,16 @@
 console.log("Ciao!");
-/*
+
+
+
 dateElement = document.querySelector("#date");
 
 today = new Date();
 
-dateElement.innerText = today.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-*/
+let options = { hour: '2-digit', minute: '2-digit' };
+dateElement.innerText = today.toLocaleString([], options);
 
 
+/*
 function toggleMenu() {
     let menuMobile = document.querySelector("nav.mobile");
     if (activeMenu == true) {
@@ -18,11 +21,11 @@ function toggleMenu() {
         activeMenu = true;
     }
 }
+*/
 
-let activeMenu = false;
+//let activeMenu = false;
 let hamburgerElement = document.querySelector(".hamburger");
 let menuMobile = document.querySelector("nav.mobile");
-
 
 hamburgerElement.addEventListener("click",
     () => menuMobile.classList.toggle("hide"));
