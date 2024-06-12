@@ -16,3 +16,18 @@ Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, ad
 coconat by Sara Lavazza
 https://www.collletttivo.it/typefaces/coconat
 https://saralavazza.it/
+
+
+### Technology
+
+https://www.11ty.dev/
+
+Test with:
+```
+npx @11ty/eleventy --serve
+
+```
+Build with:
+```
+npx @11ty/eleventy
+```
